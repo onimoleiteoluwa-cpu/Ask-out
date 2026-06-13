@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: #ffe6e6; margin: 0; text-align: center; }
+        h1 { color: #ff4d6d; }
+        button { padding: 15px 30px; font-size: 1.2rem; border: none; border-radius: 50px; cursor: pointer; margin: 10px; }
+        #y { background: #ff4d6d; color: white; font-weight: bold; transition: 0.2s; }
+    </style>
+</head>
+<body>
+    <h1 id="q">Will you be my girlfriend? 💖</h1>
+    <button id="y" onclick="go()">Yes</button>
+    <button id="n" onclick="grow()">No</button>
+    <script>
+        let s = 1.2;
+        function grow() {
+            s += 0.5;
+            document.getElementById('y').style.fontSize = s + 'rem';
+            document.getElementById('n').innerText = "Think again! 😉";
+        }
+        function go() {
+            document.getElementById('q').innerText = "Yay! See you on our date! 🎉🥰";
+            document.getElementById('y').style.display = 'none';
+            document.getElementById('n').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
